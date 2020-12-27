@@ -16,7 +16,7 @@ deb https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main con
 
 apt update
 
-apt install debootstrap
+apt install debootstrap -y
 
 debootstrap buster /mnt http://mirrors.tuna.tsinghua.edu.cn/debian
 
