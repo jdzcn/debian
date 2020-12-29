@@ -5,10 +5,10 @@ apt update
 
 apt install firmware-amd-graphics -y
 
-apt install sudo openbox xinit xterm alsa-utils mousepad pcmanfm tint2 fonts-wqy-microhei trojan firefox-esr -y
+apt install sudo git openbox xinit xterm alsa-utils mousepad pcmanfm tint2 fonts-wqy-microhei trojan firefox-esr -y
+
 echo 'sb ALL=(ALL)NOPASSWD:ALL'>>/etc/sudoers
 
-cp trojan-client-config.json /etc/trojan/config.json
 
 useradd -m -g users sb -s /bin/bash
 passwd sb

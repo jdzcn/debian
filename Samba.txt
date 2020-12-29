@@ -1,0 +1,46 @@
+Samba : Fully accessed share directory
+2019/07/30
+  	
+Install Samba to share folders or files between Windows and Linux.
+For example, Create a fully accessed share directory which anyone can access and write without authentication.
+[1] 	Install Samba.
+root@smb:~# apt -y install samba
+
+[2] 	Configure Samba.
+root@smb:~# mkdir /home/share
+
+root@smb:~# chmod 777 /home/share
+
+root@smb:~# vi /etc/samba/smb.conf
+# line 25: add
+
+unix charset = UTF-8
+# line 30: change (Windows' default)
+
+workgroup = WORKGROUP
+# line 37: uncomment and change IP address you allow
+
+interfaces = 127.0.0.0/8 10.0.0.0/24
+# line 58: uncomment and add
+
+bind interfaces only = yes
+map to guest = Bad User
+# add to the end
+
+# any share name you like
+
+[Share]
+    # shared directory
+    path = /home/share
+    # writable
+    writable = yes
+    # guest OK
+    guest ok = yes
+    # guest only
+    guest only = yes
+    # fully accessed
+    create mode = 0777
+    # fully accessed
+    directory mode = 0777
+
+root@smb:~# systemctl restart smbd 
