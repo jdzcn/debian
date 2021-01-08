@@ -5,7 +5,7 @@ echo 'exec openbox-session'>>~/.xinitrc
 sudo timedatectl set-timezone Asia/Shanghai
 sudo timedatectl set-ntp true
 
-git clone https://github.com/jdzcn/debian
+#git clone https://github.com/jdzcn/debian
 
 mkdir -p ~/.config
 cp -r ~/debian/openbox ~/.config
