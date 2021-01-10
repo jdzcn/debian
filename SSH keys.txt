@@ -1,2 +1,10 @@
 $ ssh-keygen
 ssh-copy-id username@remote-server.org
+
+
+mutt是一个流行轻量级的电子邮件客户端命令，我们同样可以使用它发送带附件的邮件，如果你的电脑没有安装这个命令，请使用下面命令安装：
+$ sudo apt-get install mutt
+# yum install mutt
+
+现在我们可以使用mutt命令发送带附件的邮件了：
+echo "这里输入你邮件内容" | mutt -s "邮件标题"  hadoop@iteblog.com -a file.txt
