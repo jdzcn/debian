@@ -1,0 +1,11 @@
+
+[Desktop Entry]
+Version=1.0
+Name=ShowDesktop
+Comment=ShowDesktop
+Exec=xdotool key super+d
+
+Icon=video-display
+Terminal=true
+Type=Application
+Categories=System;TerminalEmulator;
