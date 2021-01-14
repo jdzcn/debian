@@ -1,4 +1,3 @@
-
 #
 # These things are run when an Openbox X Session is started.
 # You may place a similar script in $HOME/.config/openbox/autostart
@@ -7,8 +6,8 @@
 
 # If you want to use GNOME config tools...
 #
-#if test -x /usr/lib/openbox/gnome-settings-daemon >/dev/null; then
-#  /usr/lib/openbox/gnome-settings-daemon &
+#if test -x /usr/lib/x86_64-linux-gnu/gnome-settings-daemon >/dev/null; then
+#  /usr/lib/x86_64-linux-gnu/gnome-settings-daemon &
 #elif which gnome-settings-daemon >/dev/null 2>&1; then
 #  gnome-settings-daemon &
 #fi
@@ -16,10 +15,8 @@
 # If you want to use XFCE config tools...
 #
 #xfce-mcs-manager &
-# Volume
-#if which volumeicon >/dev/null 2>&1; then
-#       volumeicon &
-#fi
+#feh --bg-scale ~/debian/bg.png
 pcmanfm --desktop &
 tint2 &
-#fcitx &
+volti &
+fcitx &
