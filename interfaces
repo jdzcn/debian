@@ -1,13 +1,27 @@
-# interfaces(5) file used by ifup(8) and ifdown(8)
-# Include files from /etc/network/interfaces.d:
-source-directory /etc/network/interfaces.d
-auto enp2s0
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
 
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+allow-hotplug enp2s0
+
+#iface enp2s0 inet dhcp
+
+# add static settings
 iface enp2s0 inet static
 address 192.168.1.2
+network 192.168.1.0
 netmask 255.255.255.0
+broadcast 192.168.1.255
 gateway 192.168.1.1
+dns-nameservers 192.168.1.1
 
+# systemctl restart networking ifup@ens2
 #iface eth0 inet dhcp
 #ifdown eth0
 #ifup eth0
