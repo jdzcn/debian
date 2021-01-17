@@ -18,5 +18,5 @@
 #feh --bg-scale ~/debian/bg.png
 pcmanfm --desktop &
 tint2 &
-volti &
+volumeicon &
 fcitx &
