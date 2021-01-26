@@ -30,7 +30,8 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvt -fg gray -bg black
+#bindsym $mod+Return exec i3-sensible-terminal
 #bindsym $mod+Return exec xterm -fg gray -bg black
 
 # kill focused window
@@ -190,17 +191,17 @@ bar {
 	#assign [class="netease-cloud-music"] 3
 
 	#默认浮动窗口
-	for_window [class="Xfce4-terminal"] floating enable
+	for_window [class="URxvt"] floating enable
 
 	#自定义键盘
-	bindsym $mod+o exec "rofi -combi-modi window,drun,ssh -theme solarized -font 'hack 10' -show combi"
+	#bindsym $mod+o exec "rofi -combi-modi window,drun,ssh -theme solarized -font 'hack 10' -show combi"
 	bindsym $mod+plus exec "amixer -q sset Master 5%+ "
 	bindsym $mod+minus exec "amixer -q sset Master 5%- "
 	bindsym $mod+m exec amixer set Master toggle
 	bindsym $mod+c exec --no-startup-id chromium https://tv.cctv.com/live/index.shtml?spm=C96370.PPDB2vhvSivD.Eqs52HVQ2WJL.1
 	bindsym $mod+i exec --no-startup-id firefox 
 
-	bindsym $mod+p exec --no-startup-id pcmanfm ~/Desktop
+	bindsym $mod+p exec --no-startup-id pcmanfm /usr/share/applications
 	bindsym $mod+Shift+p exec --no-startup-id systemctl poweroff
 	bindsym $mod+Shift+o exec --no-startup-id systemctl reboot
 	#bindsym $mod+Shift+u exec --no-startup-id systemctl suspend
@@ -208,6 +209,6 @@ bar {
 	bindsym --release button2 kill
 
 	exec fcitx &
-	exec volumeicon &	
+	#exec volumeicon &	
 	#exec_always --no-startup-id pcmanfm --desktop
 	#exec_always --no-startup-id feh --bg-fill ~/Downloads
