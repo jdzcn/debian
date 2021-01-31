@@ -1,3 +1,5 @@
+Install debian 10 by debootstrap
+
 sudo -i
 fdisk -l
 mkfs.ext4 /dev/sda1
