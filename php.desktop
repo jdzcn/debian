@@ -1,0 +1,11 @@
+
+[Desktop Entry]
+Version=1.0
+Name=php server
+Comment=php server
+Exec=php -S localhost:8000 -t sblog/
+
+Icon=utilities-terminal
+Terminal=true
+Type=Application
+Categories=System;TerminalEmulator;
