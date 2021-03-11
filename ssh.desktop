@@ -1,9 +1,9 @@
 
 [Desktop Entry]
 Version=1.0
-Name=jdzcn.xyz(ssh)
-Comment=ssh jdzcn.xyz
-Exec=ssh root@jdzcn.xyz
+Name=jdztao.com(ssh)
+Comment=ssh jdzcn.com
+Exec=ssh root@jdztao.com
 
 Icon=utilities-terminal
 Terminal=true
